@@ -2,7 +2,7 @@ const fs = require('fs');
 
 function writeFile(filename, data) {
     return new Promise((resolve, reject) => {
-        fs.readFile(filename, data, 'utf8', (error) => {
+        fs.writeFile(filename, data, 'utf8', (error) => {
             if (error) {
                 reject(error);
             }
